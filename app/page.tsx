@@ -277,7 +277,7 @@ const QUESTIONS = [
 // ALGORITHM
 // ============================================================
 
-function calcResult(answers) {
+function calcResult(answers: any[]) {
   const breedScores = {};
   const params = { sociality: 0, independence: 0, dominance: 0, emotion: 0, impulse: 0 };
 
