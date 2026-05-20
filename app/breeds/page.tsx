@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import { BREEDS } from "../../lib/breeds";
 
@@ -10,26 +10,23 @@ export default function BreedsPage() {
       {/* Header */}
       <header style={{ borderBottom: "1px solid #222", padding: "16px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <Link href="/" style={{ textDecoration: "none", color: "#f0f0f0", fontSize: "20px", fontWeight: "800", letterSpacing: "-0.5px" }}>
-          🐕 何犬診断
+          枢 菴慕堪險ｺ譁ｭ
         </Link>
         <Link href="/" style={{ textDecoration: "none", background: "#f5a623", color: "#000", padding: "8px 20px", borderRadius: "50px", fontSize: "14px", fontWeight: "700" }}>
-          診断する →
-        </Link>
+          險ｺ譁ｭ縺吶ｋ 竊・        </Link>
       </header>
 
       {/* Hero */}
       <div style={{ textAlign: "center", padding: "60px 24px 40px" }}>
         <p style={{ color: "#f5a623", fontSize: "13px", fontWeight: "700", letterSpacing: "3px", marginBottom: "12px" }}>BREED TYPES</p>
         <h1 style={{ fontSize: "clamp(28px, 5vw, 48px)", fontWeight: "900", letterSpacing: "-1px", lineHeight: 1.2, margin: "0 0 16px" }}>
-          全12犬種図鑑
-        </h1>
+          蜈ｨ12迥ｬ遞ｮ蝗ｳ髑・        </h1>
         <p style={{ color: "#888", fontSize: "16px", maxWidth: "480px", margin: "0 auto" }}>
-          あなたはどの犬種？それぞれの犬種に4つの派生タイプ、合計48タイプが存在します。
-        </p>
+          縺ゅ↑縺溘・縺ｩ縺ｮ迥ｬ遞ｮ・溘◎繧後◇繧後・迥ｬ遞ｮ縺ｫ4縺､縺ｮ豢ｾ逕溘ち繧､繝励∝粋險・8繧ｿ繧､繝励′蟄伜惠縺励∪縺吶・        </p>
       </div>
 
       {/* Breed Grid */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px 80px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "20px" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px 80px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "20px", alignItems: "stretch" }}>
         {breeds.map((breed) => (
           <Link
             key={breed.id}
@@ -39,6 +36,7 @@ export default function BreedsPage() {
             <div
               style={{
                 background: "#13131a",
+                height: "100%",
                 border: `1px solid ${breed.color}33`,
                 borderRadius: "16px",
                 padding: "28px",
@@ -77,7 +75,7 @@ export default function BreedsPage() {
 
               {/* Variants */}
               <div style={{ borderTop: "1px solid #222", paddingTop: "12px" }}>
-                <p style={{ color: "#555", fontSize: "11px", marginBottom: "6px" }}>派生タイプ</p>
+                <p style={{ color: "#555", fontSize: "11px", marginBottom: "6px" }}>豢ｾ逕溘ち繧､繝・/p>
                 <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
                   {breed.variants.map(v => (
                     <span key={v.name} style={{ color: "#777", fontSize: "11px", background: "#1e1e2a", padding: "2px 8px", borderRadius: "4px" }}>
@@ -93,11 +91,13 @@ export default function BreedsPage() {
 
       {/* CTA */}
       <div style={{ textAlign: "center", padding: "40px 24px 80px", borderTop: "1px solid #222" }}>
-        <p style={{ color: "#888", marginBottom: "20px" }}>自分がどの犬種か気になったら</p>
+        <p style={{ color: "#888", marginBottom: "20px" }}>閾ｪ蛻・′縺ｩ縺ｮ迥ｬ遞ｮ縺区ｰ励↓縺ｪ縺｣縺溘ｉ</p>
         <Link href="/" style={{ textDecoration: "none", background: "linear-gradient(135deg, #f5a623, #e74c3c)", color: "#fff", padding: "16px 40px", borderRadius: "50px", fontSize: "16px", fontWeight: "800", display: "inline-block" }}>
-          🐕 無料で診断する
+          枢 辟｡譁吶〒險ｺ譁ｭ縺吶ｋ
         </Link>
       </div>
     </div>
   );
 }
+
+
