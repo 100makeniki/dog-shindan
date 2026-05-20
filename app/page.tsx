@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { BREEDS } from "../lib/breeds";
@@ -371,6 +371,9 @@ export default function Home() {
           ))}
         </div>
         <div style={{ ...styles.content, maxWidth: "600px", margin: "0 auto", padding: "32px 24px", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+          <div style={{ marginBottom: "16px" }}>
+            <button onClick={reset} style={{ background: "none", border: "none", color: "#666", fontSize: "14px", cursor: "pointer", padding: "4px 0" }}>← TOPに戻る</button>
+          </div>
           {/* Progress */}
           <div style={{ marginBottom: "40px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
